@@ -9,7 +9,7 @@ const menuBtn = document.querySelector('#menu');
 const contactBtn = document.querySelector('#contact');
 
 homeBtn.setAttribute('id', 'active');
-menuPage();
+homePage();
 
 homeBtn.addEventListener('click', () => {
     clearContent();
