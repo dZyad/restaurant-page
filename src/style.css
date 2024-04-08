@@ -42,3 +42,18 @@ button {
 h1 {
     font-size: 2rem;
 }
+
+footer {
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    background-color: var(--stone-950);
+    text-align: center;
+    padding: 10px 0;
+    color: var(--stone-50);
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
