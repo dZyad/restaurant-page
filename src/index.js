@@ -1,16 +1,42 @@
 import './style.css';
+import { homePage } from './home';
+import { contactPage } from './contact';
+import { menuPage } from './menu';
 
 const content = document.querySelector('#content');
+const homeBtn = document.querySelector('#home');
+const menuBtn = document.querySelector('#menu');
+const contactBtn = document.querySelector('#contact');
 
-function addHome() {
-    const title = document.createElement('h1');
-    const presentation = document.createElement('p');
+homeBtn.setAttribute('id', 'active');
+menuPage();
 
-    title.textContent = 'Minimalist';
-    presentation.innerHTML = `Welcome to <em>minimalist</em>. A place where <em>less is <strong>more</strong></em>.`
+homeBtn.addEventListener('click', () => {
+    clearContent();
+    menuBtn.removeAttribute('id', 'active');
+    contactBtn.removeAttribute('id', 'active');
+    homeBtn.setAttribute('id', 'active');
+    homePage();
+})
 
-    content.append(title);
-    content.append(presentation);
+menuBtn.addEventListener('click', () => {
+    clearContent();
+    homeBtn.removeAttribute('id', 'active');
+    contactBtn.removeAttribute('id', 'active');
+    menuBtn.setAttribute('id', 'active');
+    menuPage();
+})
+
+contactBtn.addEventListener('click', () => {
+    clearContent();
+    homeBtn.removeAttribute('id', 'active');
+    menuBtn.removeAttribute('id', 'active');
+    contactBtn.setAttribute('id', 'active');
+    contactPage();
+})
+
+function clearContent() {
+    while(content.lastChild) {
+        content.lastChild.remove();
+    }
 }
-
-addHome();

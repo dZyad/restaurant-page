@@ -31,8 +31,12 @@ button {
     background-color: var(--stone-50);
 }
 
+#active {
+    text-decoration: underline var(--stone-950);
+}
+
 #content {
-    width: clamp(35dvw);
+    width: 40dvw;
 }
 
 h1 {
