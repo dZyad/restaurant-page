@@ -1,0 +1,40 @@
+:root {
+    --stone-50: #fafafa;
+    --stone-950: #0c0a09;
+}
+
+* {
+    margin: 0;
+    border: 0;
+    font-size: 18px;
+    font-family: monospace;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: var(--stone-50);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+    color: var(--stone-950);
+}
+
+nav {
+    margin: 1rem;
+    display: flex;
+    gap: 1rem;
+}
+
+button {
+    flex: 1;
+    background-color: var(--stone-50);
+}
+
+#content {
+    width: clamp(35dvw);
+}
+
+h1 {
+    font-size: 2rem;
+}
